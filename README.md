@@ -1,3 +1,3 @@
-1. Support Sonoma 14.7.4
-2. Support Intel AX210 wifi + bluetooth
+1. Support Sequoia / Sonoma
+2. Support Intel AX210 wifi + bluetooth (with OCLP patched)
 3. Disabled DGPU
