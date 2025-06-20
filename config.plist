@@ -56,7 +56,7 @@
                     <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-GPU-DISABLE.aml</string>
                 </dict>
@@ -124,6 +124,8 @@
                 <false/>
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
+                <key>ClearTaskSwitchBit</key>
+                <false/>
                 <key>DevirtualiseMmio</key>
                 <true/>
                 <key>DisableSingleUser</key>
@@ -136,6 +138,8 @@
                 <true/>
                 <key>EnableWriteUnprotector</key>
                 <true/>
+                <key>FixupAppleEfiImages</key>
+                <false/>
                 <key>ForceBooterSignature</key>
                 <false/>
                 <key>ForceExitBootServices</key>
@@ -166,6 +170,11 @@
         <dict>
             <key>Add</key>
             <dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>disable-gpu</key>
+                    <integer>1</integer>
+                </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
                     <key>device-id</key>
@@ -459,6 +468,8 @@
                 <true/>
                 <key>DisableIoMapper</key>
                 <true/>
+                <key>DisableIoMapperMapping</key>
+                <false/>
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
@@ -516,6 +527,8 @@
                 <false/>
                 <key>HideAuxiliary</key>
                 <true/>
+                <key>InstanceIdentifier</key>
+                <string></string>
                 <key>LauncherOption</key>
                 <string>Disabled</string>
                 <key>LauncherPath</key>
@@ -987,16 +1000,22 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
+                <key>ConsoleFont</key>
+                <string></string>
                 <key>ConsoleMode</key>
                 <string>Max</string>
                 <key>DirectGopRendering</key>
                 <false/>
                 <key>ForceResolution</key>
                 <false/>
+                <key>GopBurstMode</key>
+                <false/>
                 <key>GopPassThrough</key>
                 <string>Disabled</string>
                 <key>IgnoreTextInGraphics</key>
                 <false/>
+                <key>InitialMode</key>
+                <string>Auto</string>
                 <key>ProvideConsoleGop</key>
                 <true/>
                 <key>ReconnectGraphicsOnConnect</key>
@@ -1052,6 +1071,8 @@
                 <false/>
                 <key>OSInfo</key>
                 <false/>
+                <key>PciIo</key>
+                <false/>
                 <key>UnicodeCollation</key>
                 <false/>
             </dict>
@@ -1081,12 +1102,18 @@
                 <true/>
                 <key>ResizeGpuBars</key>
                 <integer>-1</integer>
+                <key>ResizeUsePciRbIo</key>
+                <false/>
+                <key>ShimRetainProtocol</key>
+                <false/>
                 <key>TscSyncTimeout</key>
                 <integer>0</integer>
                 <key>UnblockFsConnect</key>
                 <false/>
             </dict>
             <key>ReservedMemory</key>
+            <array/>
+            <key>Unload</key>
             <array/>
         </dict>
     </dict>
